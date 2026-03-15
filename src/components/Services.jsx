@@ -22,6 +22,7 @@ const services = [
     desc: "Burst pipes, flooding, or major leaks? We respond within 60 minutes, day or night.",
     color: "bg-red-50 text-red-600",
     border: "hover:border-red-200",
+    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=220&fit=crop&auto=format",
   },
   {
     icon: (
@@ -43,6 +44,7 @@ const services = [
     desc: "From small leaks to full pipe replacements — we handle all pipe work with precision.",
     color: "bg-blue-50 text-primary",
     border: "hover:border-blue-200",
+    img: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=220&fit=crop&auto=format",
   },
   {
     icon: (
@@ -64,6 +66,7 @@ const services = [
     desc: "Professional drain snaking and hydro-jetting to clear any blockage fast.",
     color: "bg-green-50 text-green-600",
     border: "hover:border-green-200",
+    img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=220&fit=crop&auto=format",
   },
   {
     icon: (
@@ -90,6 +93,7 @@ const services = [
     desc: "Installation, repair, and maintenance for tank and tankless water heaters.",
     color: "bg-orange-50 text-orange-600",
     border: "hover:border-orange-200",
+    img: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=220&fit=crop&auto=format",
   },
   {
     icon: (
@@ -111,6 +115,7 @@ const services = [
     desc: "Complete fixture installations, remodels, and upgrades for any room.",
     color: "bg-purple-50 text-purple-600",
     border: "hover:border-purple-200",
+    img: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&h=220&fit=crop&auto=format",
   },
   {
     icon: (
@@ -132,6 +137,7 @@ const services = [
     desc: "Advanced technology to pinpoint hidden leaks before they cause costly damage.",
     color: "bg-teal-50 text-teal-600",
     border: "hover:border-teal-200",
+    img: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&h=220&fit=crop&auto=format",
   },
 ];
 
@@ -180,35 +186,42 @@ export default function Services() {
             <motion.div
               key={s.title}
               variants={item}
-              className={`group bg-white rounded-3xl p-7 border-2 border-transparent ${s.border} shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer`}
+              className={`group bg-white rounded-3xl overflow-hidden border-2 border-transparent ${s.border} shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer`}
             >
-              <div
-                className={`w-14 h-14 ${s.color} rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110`}
-              >
-                {s.icon}
-              </div>
-              <h3 className="font-heading font-bold text-dark text-lg mb-2">
-                {s.title}
-              </h3>
-              <p className="text-gray-500 text-sm leading-relaxed mb-4">
-                {s.desc}
-              </p>
-              <span className="text-primary text-sm font-semibold inline-flex items-center gap-1 group-hover:gap-2 transition-all duration-200">
-                Learn more
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
+              <img
+                src={s.img}
+                alt={s.title}
+                className="w-full h-44 object-cover"
+              />
+              <div className="p-7">
+                <div
+                  className={`w-14 h-14 ${s.color} rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110`}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                  />
-                </svg>
-              </span>
+                  {s.icon}
+                </div>
+                <h3 className="font-heading font-bold text-dark text-lg mb-2">
+                  {s.title}
+                </h3>
+                <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                  {s.desc}
+                </p>
+                <span className="text-primary text-sm font-semibold inline-flex items-center gap-1.5 transition-colors duration-200">
+                  Learn more
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                    />
+                  </svg>
+                </span>
+              </div>
             </motion.div>
           ))}
         </motion.div>

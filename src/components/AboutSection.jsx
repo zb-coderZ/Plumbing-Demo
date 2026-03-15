@@ -19,7 +19,7 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative"
+            className="relative pb-6"
           >
             {/* Main card */}
             <div className="bg-primary rounded-3xl p-8 text-white relative overflow-hidden">
@@ -57,7 +57,7 @@ export default function AboutSection() {
             </div>
 
             {/* Floating badge */}
-            <div className="absolute -bottom-4 -right-4 md:right-8 bg-white rounded-2xl shadow-xl p-4 border border-gray-100 flex items-center gap-3">
+            <div className="absolute -bottom-4 right-0 md:-right-4 bg-white rounded-2xl shadow-xl p-4 border border-gray-100 flex items-center gap-3">
               <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center">
                 <svg
                   className="w-5 h-5 text-green-600"

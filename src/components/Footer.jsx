@@ -100,7 +100,7 @@ export default function Footer() {
               <li key={l.label}>
                 <Link
                   to={l.path}
-                  className="text-sm hover:text-white hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1.5"
+                  className="text-sm hover:text-white transition-colors duration-200 inline-flex items-center gap-1.5"
                 >
                   <span className="w-1 h-1 bg-gold rounded-full flex-shrink-0" />
                   {l.label}
@@ -120,7 +120,7 @@ export default function Footer() {
               <li key={s}>
                 <Link
                   to="/services"
-                  className="text-sm hover:text-white hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1.5"
+                  className="text-sm hover:text-white transition-colors duration-200 inline-flex items-center gap-1.5"
                 >
                   <span className="w-1 h-1 bg-gold rounded-full flex-shrink-0" />
                   {s}
@@ -203,7 +203,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 pb-24 md:pb-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
           <p>© 2026 ZB Karalius. All rights reserved.</p>
           <div className="flex items-center gap-1.5">
             <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />

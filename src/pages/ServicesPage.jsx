@@ -13,14 +13,17 @@ const allServices = [
       {
         title: "Burst Pipe Repair",
         desc: "Immediate response to burst pipes to prevent flooding and structural damage.",
+        img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=260&fit=crop&auto=format",
       },
       {
         title: "24/7 Emergency Callouts",
         desc: "Technicians dispatched within 60 minutes, any time of day or night.",
+        img: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=260&fit=crop&auto=format",
       },
       {
         title: "Water Damage Mitigation",
         desc: "Emergency water shutoff and containment to minimize property damage.",
+        img: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&h=260&fit=crop&auto=format",
       },
     ],
   },
@@ -32,26 +35,32 @@ const allServices = [
       {
         title: "Bathroom Plumbing",
         desc: "Toilets, showers, baths, and vanity fixtures — installation and repair.",
+        img: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&h=260&fit=crop&auto=format",
       },
       {
         title: "Kitchen Plumbing",
         desc: "Sinks, dishwashers, garbage disposals, and full kitchen remodels.",
+        img: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=260&fit=crop&auto=format",
       },
       {
         title: "Water Heater Services",
         desc: "Tank and tankless water heater installation, repair, and maintenance.",
+        img: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=260&fit=crop&auto=format",
       },
       {
         title: "Drain Cleaning",
         desc: "Professional hydro-jetting and snaking to clear any blockage.",
+        img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=260&fit=crop&auto=format",
       },
       {
         title: "Leak Detection & Repair",
         desc: "Advanced technology to locate and repair hidden leaks.",
+        img: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&h=260&fit=crop&auto=format",
       },
       {
         title: "Pipe Replacement",
         desc: "Full repiping services for old or corroded plumbing systems.",
+        img: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=260&fit=crop&auto=format",
       },
     ],
   },
@@ -63,14 +72,17 @@ const allServices = [
       {
         title: "Commercial Drain Services",
         desc: "High-capacity drain cleaning for restaurants, offices, and retail.",
+        img: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=600&h=260&fit=crop&auto=format",
       },
       {
         title: "Backflow Prevention",
         desc: "Installation and testing of backflow prevention devices.",
+        img: "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=600&h=260&fit=crop&auto=format",
       },
       {
         title: "Plumbing Inspections",
         desc: "Full-building inspections and compliance reports.",
+        img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=260&fit=crop&auto=format",
       },
     ],
   },
@@ -128,14 +140,21 @@ export default function ServicesPage() {
                 {cat.items.map((item) => (
                   <div
                     key={item.title}
-                    className={`${cat.color} border-2 rounded-2xl p-6 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200`}
+                    className={`${cat.color} border-2 rounded-2xl overflow-hidden hover:shadow-md hover:-translate-y-0.5 transition-all duration-200`}
                   >
-                    <h3 className="font-heading font-bold text-dark text-base mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-500 text-sm leading-relaxed">
-                      {item.desc}
-                    </p>
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="w-full h-44 object-cover"
+                    />
+                    <div className="p-6">
+                      <h3 className="font-heading font-bold text-dark text-base mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-500 text-sm leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>

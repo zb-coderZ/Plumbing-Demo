@@ -56,7 +56,7 @@ export default function Testimonials() {
             customers across the city.
           </p>
           {/* Aggregate rating */}
-          <div className="inline-flex items-center gap-3 mt-6 bg-[#F3F4F6] px-5 py-3 rounded-2xl">
+          <div className="inline-flex flex-wrap items-center justify-center gap-3 mt-6 bg-[#F3F4F6] px-5 py-3 rounded-2xl max-w-full">
             <div className="flex gap-0.5">
               {[...Array(5)].map((_, i) => (
                 <svg
