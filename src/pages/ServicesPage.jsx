@@ -23,7 +23,7 @@ const allServices = [
       {
         title: "Water Damage Mitigation",
         desc: "Emergency water shutoff and containment to minimize property damage.",
-        img: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&h=260&fit=crop&auto=format",
+        img: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&h=260&fit=crop&auto=format",
       },
     ],
   },
